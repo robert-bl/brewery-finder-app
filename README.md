@@ -10,6 +10,8 @@ Users will be able to enter a city and state to recieve a list of craft brewerie
 
 [Page Layout](https://wireframe.cc/wCquuV)
 
+[Trello Board](https://trello.com/b/QsdchkXT/brewery-finder)
+
 
 Stretch goals: Add map locations for found breweries and a search option that uses distance from your location instead of a city designation. May use [The Beer Mapping Project](https://beermapping.com/) and/or [Google Maps](https://developers.google.com/maps/apis-by-platform) to achieve this.
 
