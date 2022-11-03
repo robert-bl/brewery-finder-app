@@ -1,9 +1,15 @@
 
 
+import Nav from './Nav'
+import Search from './Search'
 
 export default function Header () {
 
     return (
-        <h2>Header</h2>
+        <div>
+            <h2>Header</h2>
+            <Nav />
+            <Search />
+        </div>
     )
 }
