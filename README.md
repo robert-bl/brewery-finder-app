@@ -4,9 +4,10 @@
 
 This app will allow the user to search their city for craft breweries. Information will be pulled from the [Open Brewery Database](https://www.openbrewerydb.org/).
 
-Users will be able to enter a city and state to recieve a list of craft breweries located there. Listed breweries can be clicked on to recieve more detailed data including a link to the brewerie's website.
+Users will be able to enter a city and state to recieve a list of craft breweries located there. Listed breweries can be clicked on to recieve more detailed data including a link to the brewery's website.
 
 [Components Diagram](https://app.diagrams.net/#LUntitled%20Diagram)
+
 [Page Layout](https://wireframe.cc/wCquuV)
 
 
