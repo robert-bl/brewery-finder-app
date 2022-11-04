@@ -1,21 +1,37 @@
 import { useState, useEffect } from "react"
 import { STATES_LIST } from "../globals"
-
+import axios from 'axios';
+import { BREWERYDB_BASE_URL } from '../globals'
 
 export default function Search (props) {
+
 
 
     const handleChange = (event) => {
         props.setLocation({...props.location, [event.target.id]: event.target.value})
         console.log(props.location)
     }
-    const handleSubmit = (event) => {}
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        const city = props.location.city
+        const getData = async () => {
+        const response = await axios.get(`${BREWERYDB_BASE_URL}breweries?by_city=${city}&per_page=50`)
+        props.setBreweries(response.data)
+        console.log(props.breweries)
+        }        
+        getData()
+
+
+    }
+
+
 
 
 
     return (
         <div className="search">
-            <form>
+            <form onSubmit={handleSubmit}>
                 
                 
                 <input type="text" id="city" placeholder="city" onChange={handleChange} value={props.location.city}/>
@@ -23,11 +39,12 @@ export default function Search (props) {
                 
                 
                 <select id='state' onChange={handleChange}>
+                        <option> - </option>
                     {STATES_LIST.map((state) => (
                         <option key={state} value={state}>{state}</option>
                     ))}
                 </select>
-                <button tyle='submit'>Find Breweries</button>
+                <button type='submit'>Find Breweries</button>
             </form>
         </div>
     )

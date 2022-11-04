@@ -9,7 +9,8 @@ export default function Header (props) {
         <div>
             <h2>Header</h2>
             <Nav />
-            <Search location={props.location} setLocation={props.setLocation}/>
+            <Search location={props.location} setLocation={props.setLocation}
+            breweries={props.breweries} setBreweries={props.setBreweries}/>
         </div>
     )
 }

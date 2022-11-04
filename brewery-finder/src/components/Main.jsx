@@ -12,7 +12,7 @@ export default function Main (props) {
             <h2>Main</h2>
             <Routes>
                 <Route path='/' element={<Home />} />
-                <Route path='/brewery-list' element={<BreweryList location={props.location}/>} />
+                <Route path='/brewery-list' element={<BreweryList breweries={props.breweries}/>} />
             </Routes>
 
         </div>

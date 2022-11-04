@@ -1,6 +1,6 @@
 import './App.css';
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 
 import Header from './components/Header'
@@ -10,16 +10,17 @@ import Footer from './components/Footer'
 function App() {
 
   const initialLocation = {
-    city: 'raleigh',
+    city: '',
     state: ''
   }
-
+  const [breweries, setBreweries] = useState([])
   const [location, setLocation] = useState(initialLocation)
 
   return (
     <div className="App">
-      <Header location={location} setLocation={setLocation}/>
-      <Main location={location}/>
+      <Header location={location} setLocation={setLocation}
+              breweries={breweries} setBreweries={setBreweries}/>
+      <Main breweries={breweries}/>
       <Footer />
     </div>
   );
