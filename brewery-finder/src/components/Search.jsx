@@ -6,22 +6,22 @@ import { BREWERYDB_BASE_URL } from '../globals'
 export default function Search (props) {
 
 
-
     const handleChange = (event) => {
         props.setLocation({...props.location, [event.target.id]: event.target.value})
-        console.log(props.location)
+        // console.log(props.location)
     }
 
     const handleSubmit = (event) => {
         event.preventDefault()
+        // console.log(props.location)
         const city = props.location.city
+        const state = props.location.state
         const getData = async () => {
-        const response = await axios.get(`${BREWERYDB_BASE_URL}breweries?by_city=${city}&per_page=50`)
+        const response = await axios.get(`${BREWERYDB_BASE_URL}by_state=${state}&by_city=${city}&per_page=50`)
         props.setBreweries(response.data)
-        console.log(props.breweries)
+        // console.log(props.breweries)
         }        
         getData()
-
 
     }
 

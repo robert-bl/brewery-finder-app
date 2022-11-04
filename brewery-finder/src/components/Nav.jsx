@@ -10,7 +10,7 @@ export default function Nav () {
             <h2>Nav</h2>
             <div className="nav-links">
                 <Link to='/'>Home</Link>
-                <Link to='/brewery-list'>Brewery List</Link>
+                <Link to='/breweries'>Brewery List</Link>
             </div>
         </div>
     )

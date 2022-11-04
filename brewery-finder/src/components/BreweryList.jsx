@@ -1,26 +1,15 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 import { BREWERYDB_BASE_URL } from '../globals'
 
 
 export default function BreweryList (props) {
 
+  let navigate = useNavigate()
 
-
-
-
-  // useEffect(() => {
-  // const getData = async () => {
-  //   const response = await axios.get(`${BREWERYDB_BASE_URL}breweries?by_city=${props.location.city}&per_page=50`)
-  //   console.log(response.data)
-  //   setBreweries(response.data)
-  //   }
-
-  //   getData()
-
-  // }, [])
-
+  const getBreweryDetails = (brew) => {
+    navigate(`${brew.id}`)
+  }
 
   
   return (
@@ -29,7 +18,7 @@ export default function BreweryList (props) {
       :
       <div>
           {props.breweries.map((brew) => (
-              <div key={brew.id}>
+              <div key={brew.id} onClick={() => getBreweryDetails(brew)}>
                   <h3>{brew.name}</h3>
               </div>
           ))}
