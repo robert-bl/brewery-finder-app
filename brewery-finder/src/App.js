@@ -20,7 +20,7 @@ function App() {
     <div className="App">
       <Header location={location} setLocation={setLocation}
               breweries={breweries} setBreweries={setBreweries}/>
-      <Main breweries={breweries}/>
+      <Main location={location} breweries={breweries}/>
       <Footer />
     </div>
   );

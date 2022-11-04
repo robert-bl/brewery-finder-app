@@ -18,11 +18,19 @@ export default function Search (props) {
         console.log(props.location)
         const city = props.location.city
         const state = props.location.state
+
         const getData = async () => {
-        const response = await axios.get(`${BREWERYDB_BASE_URL}by_state=${state}&by_city=${city}&per_page=50`)
-        props.setBreweries(response.data)
+        const responsePage1 = await axios.get(`${BREWERYDB_BASE_URL}by_state=${state}&by_city=${city}&page=1&per_page=50`)
+        const responsePage2 = await axios.get(`${BREWERYDB_BASE_URL}by_state=${state}&by_city=${city}&page=2&per_page=50`)
+
+        console.log(responsePage1)
+        console.log(responsePage2)
+        const response = [...responsePage1.data, ...responsePage2.data]
+            console.log(response)
+        props.setBreweries(response)
         // console.log(props.breweries)
-        }        
+        }
+
         getData()
         navigate(`/breweries`)
 

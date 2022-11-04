@@ -9,11 +9,10 @@ export default function Main (props) {
 
 
     return (
-        <div>
-            <h2>Main</h2>
+        <div className="main">
             <Routes>
                 <Route path='/' element={<Home />} />
-                <Route path='/breweries' element={<BreweryList breweries={props.breweries}/>} />
+                <Route path='/breweries' element={<BreweryList location={props.location} breweries={props.breweries}/>} />
                 <Route path='/breweries/:id' element={<BreweryDetail breweries={props.breweries} />} />
             </Routes>
 
