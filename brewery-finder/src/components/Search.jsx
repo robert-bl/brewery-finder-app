@@ -2,9 +2,11 @@ import { useState, useEffect } from "react"
 import { STATES_LIST } from "../globals"
 import axios from 'axios';
 import { BREWERYDB_BASE_URL } from '../globals'
+import { useNavigate } from "react-router-dom";
 
 export default function Search (props) {
 
+    const navigate = useNavigate()
 
     const handleChange = (event) => {
         props.setLocation({...props.location, [event.target.id]: event.target.value})
@@ -13,7 +15,7 @@ export default function Search (props) {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        // console.log(props.location)
+        console.log(props.location)
         const city = props.location.city
         const state = props.location.state
         const getData = async () => {
@@ -22,6 +24,7 @@ export default function Search (props) {
         // console.log(props.breweries)
         }        
         getData()
+        navigate(`/breweries`)
 
     }
 
