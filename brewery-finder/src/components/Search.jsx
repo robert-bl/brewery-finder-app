@@ -9,11 +9,12 @@ export default function Search (props) {
     const navigate = useNavigate()
 
     const handleChange = (event) => {
+        console.log(event.target.value)
         props.setLocation({...props.location, [event.target.id]: event.target.value})
         // console.log(props.location)
     }
 
-    const handleSubmit = (event) => {
+    const handleLocationSubmit = (event) => {
         event.preventDefault()
         console.log(props.location)
         const city = props.location.city
@@ -22,13 +23,10 @@ export default function Search (props) {
         const getData = async () => {
         const responsePage1 = await axios.get(`${BREWERYDB_BASE_URL}by_state=${state}&by_city=${city}&page=1&per_page=50`)
         const responsePage2 = await axios.get(`${BREWERYDB_BASE_URL}by_state=${state}&by_city=${city}&page=2&per_page=50`)
-
-        console.log(responsePage1)
-        console.log(responsePage2)
         const response = [...responsePage1.data, ...responsePage2.data]
             console.log(response)
         props.setBreweries(response)
-        // console.log(props.breweries)
+        props.setLocationHeader(`Breweries in ${props.location.city}, ${props.location.state}`)
         }
 
         getData()
@@ -36,13 +34,22 @@ export default function Search (props) {
 
     }
 
+    const handleDistanceSubmit = (event) => {
+        event.preventDefault()
+        const getData = async () => {
+        const distanceResponse = await axios.get(`${BREWERYDB_BASE_URL}by_dist=35.080894109326586,-106.60092744438134&per_page=6`)
+        props.setBreweries(distanceResponse.data)
+        }
+        getData()
+        navigate(`/breweries`)
+    }
 
 
 
 
     return (
         <div className="search">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleLocationSubmit} className='location-form'>
                 
                 
                 <input type="text" id="city" placeholder="city" onChange={handleChange} value={props.location.city}/>
@@ -56,6 +63,9 @@ export default function Search (props) {
                     ))}
                 </select>
                 <button type='submit'>Find Breweries</button>
+            </form>
+            <form onSubmit={handleDistanceSubmit} className="distance-form">
+                <button type='submit'>Find Closest Breweries</button>
             </form>
         </div>
     )

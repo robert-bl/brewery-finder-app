@@ -4,6 +4,8 @@
 export default function Footer () {
 
     return (
-        <h2>Footer</h2>
+        <div className="footer">
+            <h4>Footer</h4>
+        </div>
     )
 }

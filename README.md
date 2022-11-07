@@ -22,3 +22,9 @@ Sources:
 APIs
 
 https://app.serpwow.com/playground
+
+
+CSS
+
+footer styling to avoid covering content:
+https://css-tricks.com/couple-takes-sticky-footer/

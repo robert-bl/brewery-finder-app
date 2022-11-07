@@ -1,8 +1,72 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  height: 100%;
 }
 
 .nav-links {
   display: flex;
   justify-content: space-around;
+}
+
+.main-content {
+  margin-bottom: -50px;
+}
+
+.push {
+  height: 50px;
+}
+
+.brewery-list-arr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.brew-list-item {
+  text-align: center;
+  background: none;
+  border-radius: 15px;
+  width: 30%;
+  margin: 5px;
+  height: 80px;
+
+}
+
+.brew-list-item:hover {
+  text-align: center;
+  background-image: url('https://media.istockphoto.com/id/1165339040/photo/craft-beer-sampler-tray.jpg?b=1&s=170667a&w=0&k=20&c=Rfg_kdJqt5dAOzW3bA2X_fNeRgdz_EwBcOD0NOpBB5U=');
+  background-size: cover;
+  border-radius: 15px;
+  width: 30%;
+  margin: 5px;
+  height: 80px;
+  color: white;
+  opacity: 0.5;
+}
+
+.header {
+  /* position: fixed;
+  top: 0;
+  width: 100%; */
+  background-color: slategray;
+}
+
+
+input, button, select {
+  border-radius: 3px;
+  border: none;
+  margin: 5px;
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  width: 100%;
+  height: 50px;
 }

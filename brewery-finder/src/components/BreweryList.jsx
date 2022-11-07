@@ -19,13 +19,16 @@ export default function BreweryList (props) {
   (!props.breweries) ?
       <h2>Error</h2>
       :
-      <div>
-          <h2>Breweries in {props.location.city}, {props.location.state}</h2>
+      <div className='brewery-list'>
+          <h2>{props.locationHeader}</h2>
+          <div className="brewery-list-arr">
           {props.breweries.map((brew) => (
-              <div key={brew.id} onClick={() => getBreweryDetails(brew)}>
-                  <h3>{brew.name}</h3>
+              <div className='brew-list-item' key={brew.id} onClick={() => getBreweryDetails(brew)}>
+                  <h4 className='list-brewery-name'>{brew.name}</h4>
+                  <p>{brew.brewery_type}</p>
               </div>
           ))}
+          </div>
       </div>
   )
 }
