@@ -28,3 +28,8 @@ CSS
 
 footer styling to avoid covering content:
 https://css-tricks.com/couple-takes-sticky-footer/
+
+Functionality
+
+geolocation
+https://plainenglish.io/blog/how-to-use-the-geolocation-api-in-your-react-app-54e87c9c6c94

@@ -17,7 +17,7 @@ export default function BreweryList (props) {
   
   return (
   (!props.breweries) ?
-      <h2>Error</h2>
+      <h2>Loading...</h2>
       :
       <div className='brewery-list'>
           <h2>{props.locationHeader}</h2>

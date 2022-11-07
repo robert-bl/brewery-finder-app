@@ -16,6 +16,8 @@ export default function Search (props) {
 
     const handleLocationSubmit = (event) => {
         event.preventDefault()
+
+        props.setBreweries(null)
         console.log(props.location)
         const city = props.location.city
         const state = props.location.state
@@ -36,13 +38,27 @@ export default function Search (props) {
 
     const handleDistanceSubmit = (event) => {
         event.preventDefault()
+
+
         const getData = async () => {
-        const distanceResponse = await axios.get(`${BREWERYDB_BASE_URL}by_dist=35.080894109326586,-106.60092744438134&per_page=6`)
-        props.setBreweries(distanceResponse.data)
-        }
+        
+            props.setBreweries(null)
+            let coord = {}
+
+            navigator.geolocation.getCurrentPosition(async (pos) => {
+                        coord = {
+                            lat: pos.coords.latitude,
+                            long: pos.coords.longitude
+                        }
+                        const distanceResponse = await axios.get(`${BREWERYDB_BASE_URL}by_dist=${coord.lat},${coord.long}&per_page=6`)
+                        props.setBreweries(distanceResponse.data)
+                })
+            }
         getData()
+        props.setLocationHeader(`Closest Breweries to Your Location`)
         navigate(`/breweries`)
     }
+
 
 
 
