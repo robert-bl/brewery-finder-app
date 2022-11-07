@@ -22,8 +22,8 @@ export default function Home () {
 
     return (
         <div className="home">
-            <h2>Home</h2>
-            <img src='https://images.axios.com/i4KQgT8WwpbWXWVCNX560y1DXiE=/328x0:1768x1080/1920x1440/2022/09/19/1663608635539.jpg' alt='brewery image' width='500' />
+            <h2>Find Craft Breweries In Your City</h2>
+            <img src='https://images.squarespace-cdn.com/content/v1/5a6401f47131a5ca2455b41d/1650850323362-EXOCDA0OXQGM7SCSNVWE/160A8833.jpeg' alt='brewery image' />
         </div>
     )
 }

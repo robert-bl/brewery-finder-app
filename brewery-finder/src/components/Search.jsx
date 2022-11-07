@@ -55,7 +55,7 @@ export default function Search (props) {
                 })
             }
         getData()
-        props.setLocationHeader(`Closest Breweries to Your Location`)
+        props.setLocationHeader(`Breweries Closest to Your Location`)
         navigate(`/breweries`)
     }
 
