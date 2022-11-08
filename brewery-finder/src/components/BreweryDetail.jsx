@@ -23,28 +23,28 @@ export default function BreweryDetail (props) {
 
 
 
-        // const getImages = async () => {
-        //     const plusAdder = (inpt) => {
-        //         let brewName = inpt
-        //         while (brewName.includes(' ')) {brewName = brewName.replace(' ','+')}
-        //         return brewName
-        //         }
-        //         let imageSearch = plusAdder(selectedBrewery.name)
-        //         console.log(imageSearch)
-        //         console.log(process.env.SERPWOW_IMAGE_KEY)
+        const getImages = async () => {
+            const plusAdder = (inpt) => {
+                let brewName = inpt
+                while (brewName.includes(' ')) {brewName = brewName.replace(' ','+')}
+                return brewName
+                }
+                let imageSearch = plusAdder(selectedBrewery.name)
+                console.log(imageSearch)
+                console.log(process.env.SERPWOW_IMAGE_KEY)
 
-        //     const imagesJSON = await axios.get(`https://api.serpwow.com/search?api_key=${process.env.REACT_APP_SERPWOW_KEY}&engine=google&search_type=images&q=${imageSearch}`)
+            const imagesJSON = await axios.get(`https://api.serpwow.com/search?api_key=${process.env.REACT_APP_SERPWOW_KEY}&engine=google&search_type=images&q=${imageSearch}`)
 
-        //     console.log(imagesJSON)
-        //     setImage(imagesJSON.data.image_results[0].image)
-        // }
-        // console.log(image)
-        // getImages()
+            console.log(imagesJSON)
+            setImage(imagesJSON.data.image_results[0].image)
+        }
+        console.log(image)
+        getImages()
     
     
     
     
-        setImage('https://images.axios.com/i4KQgT8WwpbWXWVCNX560y1DXiE=/328x0:1768x1080/1920x1440/2022/09/19/1663608635539.jpg')
+        // setImage('https://images.axios.com/i4KQgT8WwpbWXWVCNX560y1DXiE=/328x0:1768x1080/1920x1440/2022/09/19/1663608635539.jpg')
 
 
     }, [id])
