@@ -31,9 +31,9 @@ export default function BreweryDetail (props) {
         //         }
         //         let imageSearch = plusAdder(selectedBrewery.name)
         //         console.log(imageSearch)
+        //         console.log(process.env.SERPWOW_IMAGE_KEY)
 
-        //     const imagesJSON = await axios.get(`https://api.serpwow.com/search?api_key=85CFA47E3D544035AC46562E93904CFE&engine=google&search_type=images&q=${imageSearch}`
-        //     )
+        //     const imagesJSON = await axios.get(`https://api.serpwow.com/search?api_key=${process.env.REACT_APP_SERPWOW_KEY}&engine=google&search_type=images&q=${imageSearch}`)
 
         //     console.log(imagesJSON)
         //     setImage(imagesJSON.data.image_results[0].image)
