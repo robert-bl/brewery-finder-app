@@ -4,13 +4,20 @@
   grid-template-columns: auto;
   grid-template-rows: auto auto auto;
   height: 100%;
+  background-color: #DFE0DF;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.title-nav {
+  color: white;
 }
 
 .nav-links {
   display: flex;
   justify-content: space-around;
-  background-color: slategray;
+  background-color: #F3B22A;
   font-size: x-large;
+  opacity: 0.9;
 }
 
 .link {
@@ -21,14 +28,22 @@
 .search {
   display: flex;
   justify-content: space-around;
-  background-color: black;
+  background-color: #A78D65;
 }
+
+/* .location-form {
+  margin-left: 30px;
+}
+
+.distance-form {
+  align-self: center;
+} */
 
 .home {
   margin-top: -20px;
   height: 100vh;
   background-image: url('https://images.squarespace-cdn.com/content/v1/5a6401f47131a5ca2455b41d/1650850323362-EXOCDA0OXQGM7SCSNVWE/160A8833.jpeg');
-
+  background-size: cover;
 }
 
 .home-header {
@@ -38,10 +53,15 @@
 
 .main-content {
   margin-bottom: -50px;
+  background-color: #DFE0DF;
 }
 
 .push {
-  height: 75px;
+  height: 50px;
+}
+
+.brewery-list {
+  background-color: #DFE0DF;
 }
 
 .brewery-list-arr {
@@ -52,43 +72,65 @@
 }
 
 .brew-list-item {
-  text-align: center;
-  background: none;
+  width: 30vw;
   border-radius: 15px;
-  width: 25%;
-  margin: 5px;
-  height: 80px;
-
+  box-sizing: border-box;
+  margin: 3px 0px 3px 0px;
 }
 
 .brew-list-item:hover {
-  text-align: center;
-  background-image: url('https://media.istockphoto.com/id/1165339040/photo/craft-beer-sampler-tray.jpg?b=1&s=170667a&w=0&k=20&c=Rfg_kdJqt5dAOzW3bA2X_fNeRgdz_EwBcOD0NOpBB5U=');
-  background-size: cover;
-  border-radius: 15px;
-  width: 30%;
-  margin: 5px;
-  height: 80px;
-  color: white;
-  opacity: 0.5;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  box-sizing: border-box;
+  margin: 2px 0px 2px 0px;
+  background-color: #FFF8EE;
 }
 
 .detail-wrapper {
-  height: 50vh;
-  width: 80vw;
-  background-color: lightblue;
+  height: 100%;
+  width: 100%;
+  background-color: #DFE0DF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
 }
 
 .brewery-card {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 10px;
+  width: 100vw;
+}
+
+.detail-image {
+  border-radius: 15px;
+  margin-right: 10px;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.back-button {
+  height: 100px;
 }
 
 .header {
   background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/friends-toasting-with-beer-glasses-in-the-royalty-free-image-1637621142.jpg?crop=1.00xw:0.752xh;0,0.132xh&resize=1200:*');
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.header-title {
+  color: black;
+}
+
+.search-header {
+  color: white;
 }
 
 
@@ -102,7 +144,7 @@ input, button, select {
 .footer {
   position: fixed;
   bottom: 0;
-  background-color: white;
+  background-color: #A78D65;
   width: 100%;
   height: 50px;
   display: flex;

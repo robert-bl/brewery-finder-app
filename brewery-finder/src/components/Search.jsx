@@ -64,12 +64,8 @@ export default function Search (props) {
     return (
         <div className="search">
             <form onSubmit={handleLocationSubmit} className='location-form'>
-                
-                
+                <h4 className="title-nav">Search Your City: </h4>
                 <input type="text" id="city" placeholder="city" onChange={handleChange} value={props.location.city}/>
-                
-                
-                
                 <select id='state' onChange={handleChange}>
                         <option> select state </option>
                     {STATES_LIST.map((state) => (
@@ -78,8 +74,9 @@ export default function Search (props) {
                 </select>
                 <button type='submit'>Find Breweries</button>
             </form>
+
             <form onSubmit={handleDistanceSubmit} className="distance-form">
-                <label>Find Breweries Near You</label>
+                <h4 className="title-nav">Search Near You: </h4>
                 <button type='submit'>Find Closest Breweries</button>
             </form>
         </div>

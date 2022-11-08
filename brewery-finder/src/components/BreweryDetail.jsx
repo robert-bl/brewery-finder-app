@@ -59,14 +59,17 @@ export default function BreweryDetail (props) {
         ) : (
         <div className="detail-wrapper">
             <div className="brewery-card">
-                <div className="detail-image">
-                    <img src={`${image}`} width='400' />
+                <div>
+                    <img src={`${image}`} width='300' className="detail-image"/>
                 </div>
                 <div className="detail">
                     <h2>{brewery.name}</h2>
                     <p>{brewery.street} {brewery.city}, {brewery.state} {brewery.postal_code}</p>
                     <p>{brewery.brewery_type} brewery</p>
                     <a href={brewery.website_url} target='_blank'>Website</a>
+                </div>
+                <div className="button-wrapper">
+                    <button className="back-button">Back to List</button>
                 </div>
             </div>
         </div>
