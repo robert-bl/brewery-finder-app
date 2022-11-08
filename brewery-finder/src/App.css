@@ -9,6 +9,31 @@
 .nav-links {
   display: flex;
   justify-content: space-around;
+  background-color: slategray;
+  font-size: x-large;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.search {
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+}
+
+.home {
+  margin-top: -20px;
+  height: 100vh;
+  background-image: url('https://images.squarespace-cdn.com/content/v1/5a6401f47131a5ca2455b41d/1650850323362-EXOCDA0OXQGM7SCSNVWE/160A8833.jpeg');
+
+}
+
+.home-header {
+  background-color: white;
+  opacity: 0.75;
 }
 
 .main-content {
@@ -46,14 +71,24 @@
   height: 80px;
   color: white;
   opacity: 0.5;
-  transform: scale(1.2);
+}
+
+.detail-wrapper {
+  height: 50vh;
+  width: 80vw;
+  background-color: lightblue;
+}
+
+.brewery-card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .header {
-  /* position: fixed;
-  top: 0;
-  width: 100%; */
-  background-color: slategray;
+  background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/friends-toasting-with-beer-glasses-in-the-royalty-free-image-1637621142.jpg?crop=1.00xw:0.752xh;0,0.132xh&resize=1200:*');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 
@@ -71,5 +106,5 @@ input, button, select {
   width: 100%;
   height: 50px;
   display: flex;
-  margin-left: 15px;
+  padding-left: 15px;
 }

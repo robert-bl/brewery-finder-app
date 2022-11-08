@@ -54,16 +54,21 @@ export default function BreweryDetail (props) {
     // }, [brewery])
 
 
-
     return !brewery ? (
             <h1>error</h1>
         ) : (
-        <div className="brewery-card">
-            <img src={`${image}`} width='400' />
-            <h2>{brewery.name}</h2>
-            <p>{brewery.street} {brewery.city}, {brewery.state} {brewery.postal_code}</p>
-            <p>{brewery.brewery_type} brewery</p>
-            <a href={brewery.website_url} target='_blank'>Website</a>
+        <div className="detail-wrapper">
+            <div className="brewery-card">
+                <div className="detail-image">
+                    <img src={`${image}`} width='400' />
+                </div>
+                <div className="detail">
+                    <h2>{brewery.name}</h2>
+                    <p>{brewery.street} {brewery.city}, {brewery.state} {brewery.postal_code}</p>
+                    <p>{brewery.brewery_type} brewery</p>
+                    <a href={brewery.website_url} target='_blank'>Website</a>
+                </div>
+            </div>
         </div>
         )
 }

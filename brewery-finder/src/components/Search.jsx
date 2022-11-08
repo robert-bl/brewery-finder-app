@@ -39,12 +39,10 @@ export default function Search (props) {
     const handleDistanceSubmit = (event) => {
         event.preventDefault()
 
-
         const getData = async () => {
         
             props.setBreweries(null)
             let coord = {}
-
             navigator.geolocation.getCurrentPosition(async (pos) => {
                         coord = {
                             lat: pos.coords.latitude,
@@ -73,7 +71,7 @@ export default function Search (props) {
                 
                 
                 <select id='state' onChange={handleChange}>
-                        <option> - </option>
+                        <option> select state </option>
                     {STATES_LIST.map((state) => (
                         <option key={state} value={state}>{state}</option>
                     ))}
@@ -81,6 +79,7 @@ export default function Search (props) {
                 <button type='submit'>Find Breweries</button>
             </form>
             <form onSubmit={handleDistanceSubmit} className="distance-form">
+                <label>Find Breweries Near You</label>
                 <button type='submit'>Find Closest Breweries</button>
             </form>
         </div>

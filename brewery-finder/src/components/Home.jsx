@@ -22,8 +22,7 @@ export default function Home () {
 
     return (
         <div className="home">
-            <h2>Find Craft Breweries In Your City</h2>
-            <img src='https://images.squarespace-cdn.com/content/v1/5a6401f47131a5ca2455b41d/1650850323362-EXOCDA0OXQGM7SCSNVWE/160A8833.jpeg' alt='brewery image' />
+            <h2 className="home-header">Find Craft Breweries In Your City</h2>
         </div>
     )
 }
