@@ -1,10 +1,12 @@
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 import axios from "axios"
 
 
 export default function BreweryDetail (props) {
 
+    let navigate = useNavigate()
     let { id } = useParams()
 
     const [brewery, setBrewery] = useState()
@@ -12,13 +14,9 @@ export default function BreweryDetail (props) {
 
     useEffect(() => {
 
-        // console.log(props.breweries)
-
-        // console.log(id)
         let selectedBrewery = props.breweries.find(
             (brew) => brew.id === id
         )
-        // console.log(selectedBrewery)
         setBrewery(selectedBrewery)
 
 
@@ -49,9 +47,7 @@ export default function BreweryDetail (props) {
 
     }, [id])
 
-    // useEffect(() => {
-    //     console.log(brewery)
-    // }, [brewery])
+
 
 
     return !brewery ? (
@@ -60,16 +56,19 @@ export default function BreweryDetail (props) {
         <div className="detail-wrapper">
             <div className="brewery-card">
                 <div>
-                    <img src={`${image}`} width='300' className="detail-image"/>
+                    {
+                    <img src={`${image}`} width='300' className="detail-image" alt='brewery image'/>
+                    }
                 </div>
                 <div className="detail">
                     <h2>{brewery.name}</h2>
-                    <p>{brewery.street} {brewery.city}, {brewery.state} {brewery.postal_code}</p>
+                    <p className="address">{brewery.street}</p>
+                    <p className="address">{brewery.city}, {brewery.state}</p>
                     <p>{brewery.brewery_type} brewery</p>
-                    <a href={brewery.website_url} target='_blank'>Website</a>
+                    <a href={brewery.website_url} target='_blank' className="website">Website</a>
                 </div>
                 <div className="button-wrapper">
-                    <button className="back-button">Back to List</button>
+                    <button className="back-button" onClick={() => navigate('/breweries')}>Back to List</button>
                 </div>
             </div>
         </div>

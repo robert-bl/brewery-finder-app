@@ -6,6 +6,7 @@
   height: 100%;
   background-color: #DFE0DF;
   font-family: 'Bebas Neue', cursive;
+  letter-spacing: 0.1rem;
 }
 
 .title-nav {
@@ -43,7 +44,8 @@
   margin-top: -20px;
   height: 100vh;
   background-image: url('https://images.squarespace-cdn.com/content/v1/5a6401f47131a5ca2455b41d/1650850323362-EXOCDA0OXQGM7SCSNVWE/160A8833.jpeg');
-  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .home-header {
@@ -54,6 +56,7 @@
 .main-content {
   margin-bottom: -50px;
   background-color: #DFE0DF;
+  background-attachment: fixed;
 }
 
 .push {
@@ -62,6 +65,7 @@
 
 .brewery-list {
   background-color: #DFE0DF;
+  background-attachment: fixed;
 }
 
 .brewery-list-arr {
@@ -75,21 +79,24 @@
   width: 30vw;
   border-radius: 15px;
   box-sizing: border-box;
-  margin: 3px 0px 3px 0px;
+  margin: 4px 0px 4px 0px;
 }
 
 .brew-list-item:hover {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
   box-sizing: border-box;
   margin: 2px 0px 2px 0px;
-  background-color: #FFF8EE;
+  background-color: #A78D65;
+  ;
 }
 
 .detail-wrapper {
   height: 100%;
-  width: 100%;
-  background-color: #DFE0DF;
+  width: 80vw;
+  margin: 50px auto;
+  background-color: #A78D65;
+  border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,6 +109,14 @@
   align-items: center;
   padding: 10px;
   width: 100vw;
+}
+
+.address {
+  margin: 0 auto
+}
+
+.website {
+  color: black;
 }
 
 .detail-image {
@@ -117,12 +132,14 @@
 
 .back-button {
   height: 100px;
+  background-color: #DFE0DF;
 }
 
 .header {
   background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/friends-toasting-with-beer-glasses-in-the-royalty-free-image-1637621142.jpg?crop=1.00xw:0.752xh;0,0.132xh&resize=1200:*');
   background-repeat: no-repeat;
-  background-position: center;
+  /* background-position: center; */
+  background-attachment: fixed;
 }
 
 .header-title {
