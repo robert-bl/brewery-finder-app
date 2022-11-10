@@ -8,12 +8,12 @@ export default function Search (props) {
 
     const navigate = useNavigate()
 
+    //handle search input
     const handleChange = (event) => {
-        console.log(event.target.value)
         props.setLocation({...props.location, [event.target.id]: event.target.value})
-        // console.log(props.location)
     }
 
+    //pull api info for search by city
     const handleLocationSubmit = (event) => {
         event.preventDefault()
 
@@ -30,12 +30,11 @@ export default function Search (props) {
         props.setBreweries(response)
         props.setLocationHeader(`Breweries in ${props.location.city}, ${props.location.state}`)
         }
-
         getData()
         navigate(`/breweries`)
-
     }
 
+    //pull api info for search by longitude and lattitude
     const handleDistanceSubmit = (event) => {
         event.preventDefault()
 

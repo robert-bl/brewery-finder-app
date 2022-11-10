@@ -18,15 +18,17 @@ function App() {
   const [locationHeader, setLocationHeader] = useState('')
 
   return (
-    <div className="App">
-      <Header location={location} setLocation={setLocation}
-              locationHeader={location} setLocationHeader={setLocationHeader}
-              breweries={breweries} setBreweries={setBreweries}/>
-      <div className='main-content'>
-        <Main location={location} locationHeader={locationHeader} breweries={breweries}/>
-        <div className='push'></div>
+    <div className='page-wrapper'>
+      <div className="App">
+        <Header location={location} setLocation={setLocation}
+                locationHeader={location} setLocationHeader={setLocationHeader}
+                breweries={breweries} setBreweries={setBreweries}/>
+        <div className='main-content'>
+          <Main location={location} locationHeader={locationHeader} breweries={breweries}/>
+          <div className='push'></div>
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 }

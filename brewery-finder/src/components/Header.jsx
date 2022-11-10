@@ -8,7 +8,10 @@ export default function Header (props) {
     return (
         <div className='header'>
             <div className="title-nav">
-            <h2 className='header-title'>Local Brewery Finder</h2>
+            <div>
+                <h1 className='header-title'>B(HERE)</h1>
+                <p className='header-text'>Find craft breweries near you.</p>
+            </div>
             <Nav />
             </div>
             <Search location={props.location} 

@@ -21,6 +21,7 @@ Sources:
 
 APIs
 
+https://www.openbrewerydb.org/
 https://app.serpwow.com/playground
 
 
@@ -33,3 +34,8 @@ Functionality
 
 geolocation
 https://plainenglish.io/blog/how-to-use-the-geolocation-api-in-your-react-app-54e87c9c6c94
+
+styling
+
+color palette generation
+https://mycolor.space/

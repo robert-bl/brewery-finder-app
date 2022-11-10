@@ -1,12 +1,19 @@
+/* .page-wrapper {
+  display:flex;
+  justify-content: center;
+} */
+
 .App {
   text-align: center;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto auto auto;
   height: 100%;
+  max-width: 1000px;
   background-color: #DFE0DF;
   font-family: 'Bebas Neue', cursive;
   letter-spacing: 0.1rem;
+  margin: 0 auto
 }
 
 .title-nav {
@@ -24,6 +31,11 @@
 .link {
   text-decoration: none;
   color: white;
+}
+
+button {
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 0.1rem;
 }
 
 .search {
@@ -44,13 +56,21 @@
   margin-top: -20px;
   height: 100vh;
   background-image: url('https://images.squarespace-cdn.com/content/v1/5a6401f47131a5ca2455b41d/1650850323362-EXOCDA0OXQGM7SCSNVWE/160A8833.jpeg');
-  background-position: center;
+  background-position: contain;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
 .home-header {
+  padding: 40px;
+
   background-color: white;
   opacity: 0.75;
+}
+
+.quote {
+  text-decoration: none;
+  color: black;
 }
 
 .main-content {
@@ -133,6 +153,13 @@
 .back-button {
   height: 100px;
   background-color: #DFE0DF;
+  margin: 0px 2px 0px 2px;
+}
+
+.back-button:hover {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  margin: 0px 1px 0px 1px;
 }
 
 .header {
@@ -144,6 +171,19 @@
 
 .header-title {
   color: black;
+  font-size: 45px;
+  background-color: #A78D65;
+  opacity: 0.75;
+}
+
+.header-text {
+  color: black;
+  background-color: #A78D65;
+  opacity: 0.75;
+}
+
+a:hover {
+  scale: 1.05;
 }
 
 .search-header {
@@ -163,6 +203,7 @@ input, button, select {
   bottom: 0;
   background-color: #A78D65;
   width: 100%;
+  max-width: 985px;
   height: 50px;
   display: flex;
   padding-left: 15px;

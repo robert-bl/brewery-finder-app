@@ -19,7 +19,7 @@ export default function BreweryDetail (props) {
         )
         setBrewery(selectedBrewery)
 
-
+        //pull first imagae from google search of brewery
 
         // const getImages = async () => {
         //     const plusAdder = (inpt) => {
