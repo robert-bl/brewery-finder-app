@@ -18,7 +18,6 @@ export default function Search (props) {
         event.preventDefault()
 
         props.setBreweries(null)
-        console.log(props.location)
         const city = props.location.city
         const state = props.location.state
 
@@ -26,7 +25,6 @@ export default function Search (props) {
         const responsePage1 = await axios.get(`${BREWERYDB_BASE_URL}by_state=${state}&by_city=${city}&page=1&per_page=50`)
         const responsePage2 = await axios.get(`${BREWERYDB_BASE_URL}by_state=${state}&by_city=${city}&page=2&per_page=50`)
         const response = [...responsePage1.data, ...responsePage2.data]
-            console.log(response)
         props.setBreweries(response)
         props.setLocationHeader(`Breweries in ${props.location.city}, ${props.location.state}`)
         }

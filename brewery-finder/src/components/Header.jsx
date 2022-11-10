@@ -10,7 +10,7 @@ export default function Header (props) {
             <div className="title-nav">
             <div>
                 <h1 className='header-title'>B(HERE)</h1>
-                <p className='header-text'>Find craft breweries near you.</p>
+                <h4 className='header-text'>Find craft breweries near you.</h4>
             </div>
             <Nav />
             </div>

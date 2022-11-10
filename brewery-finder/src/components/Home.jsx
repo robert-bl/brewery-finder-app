@@ -22,7 +22,7 @@ export default function Home () {
 
     return (
         <div className="home">
-            <a href='https://en.wikipedia.org/wiki/Samuel_Johnson' target='_blank' className='quote'> <h2 className="home-header">“There is nothing which has yet been contrived by man by which so much happiness is produced as by a good tavern or inn.” -Samuel Johnson</h2></a>
+            <a href='https://en.wikipedia.org/wiki/Samuel_Johnson' target='_blank' className="link"> <h2 className="home-header">“There is nothing which has yet been contrived by man by which so much happiness is produced as by a good tavern or inn.” -Samuel Johnson</h2></a>
         </div>
     )
 }

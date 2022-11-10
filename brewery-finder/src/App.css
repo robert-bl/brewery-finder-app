@@ -68,7 +68,7 @@ button {
   opacity: 0.75;
 }
 
-.quote {
+.link {
   text-decoration: none;
   color: black;
 }
@@ -207,4 +207,5 @@ input, button, select {
   height: 50px;
   display: flex;
   padding-left: 15px;
+  font-size: small;
 }
